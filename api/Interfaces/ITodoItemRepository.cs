@@ -12,7 +12,7 @@ namespace api.Interfaces
         Task<List<TodoItem>> GetAllAsync();
         Task<TodoItem?> GetByIdAsync(int id);
         Task<TodoItem> CreateAsync(TodoItem itemModel);
-        Task<TodoItem?> UpdateAsync(int id, UpdateItemRequestDto itemModel);
+        Task<TodoItem?> UpdateAsync(int id, TodoItem itemModel);
         Task<TodoItem?> DeleteAsync(int id);
     }
 }

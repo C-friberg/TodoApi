@@ -30,5 +30,14 @@ namespace api.Mappers
                 IsCompleted = false
             };
         }
+
+        public static TodoItem ToItemFromUpdate(this UpdateItemRequestDto itemDto)
+        {
+            return new TodoItem
+            {
+                Name = itemDto.Name,
+                TodoListId = itemDto.TodoListId
+            };
+        }
     }
 }

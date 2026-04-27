@@ -69,7 +69,7 @@ namespace api.Controllers
             {
                 return BadRequest();
             }
-            var itemModel = await _itemRepo.UpdateAsync(id, updateDto);
+            var itemModel = await _itemRepo.UpdateAsync(id, updateDto.ToItemFromUpdate());
 
             if (itemModel == null)
             {
@@ -80,7 +80,7 @@ namespace api.Controllers
         }
 
         [HttpDelete]
-        [Route("{id: int}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             if (!ModelState.IsValid)

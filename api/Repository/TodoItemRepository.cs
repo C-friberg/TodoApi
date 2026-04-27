@@ -48,7 +48,7 @@ namespace api.Repository
             return await _context.TodoItems.FindAsync(id);
         }
 
-        public async Task<TodoItem?> UpdateAsync(int id, UpdateItemRequestDto itemModel)
+        public async Task<TodoItem?> UpdateAsync(int id, TodoItem itemModel)
         {
             var existingItem = await _context.TodoItems.FindAsync(id);
 
