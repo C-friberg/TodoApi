@@ -13,7 +13,7 @@ namespace api.Data
         {
 
         }
-        DbSet<TodoItem> TodoItems { get; set; }
-        DbSet<TodoList> TodoLists { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<TodoList> TodoLists { get; set; }
     }
 }

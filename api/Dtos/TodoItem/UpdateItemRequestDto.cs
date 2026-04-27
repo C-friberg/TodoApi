@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace api.Models
+namespace api.Dtos.TodoItem
 {
-    public class TodoItem
+    public class UpdateItemRequestDto
     {
-        public int Id { get; set; }
+        [Required]
         public string Name { get; set; } = string.Empty;
         public bool IsCompleted { get; set; }
-        //FK
+        [Range(1, int.MaxValue)]
         public int TodoListId { get; set; }
-        public TodoList? TodoList { get; set; }
+
     }
 }
